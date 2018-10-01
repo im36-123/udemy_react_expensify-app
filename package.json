@@ -1,0 +1,24 @@
+{
+  "name": "udemy_react_expensify-app",
+  "version": "1.0.0",
+  "description": "udemy_react_expensify-app",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "normalize.css": "^8.0.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-modal": "^3.6.1",
+    "react-redux": "5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.0",
+    "redux": "latest"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
