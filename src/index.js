@@ -8,6 +8,8 @@ import getVisibleExpenses from "./selectors/expenses";
 import "../node_modules/normalize.css/normalize.css";
 import "./styles/style.css";
 
+import Info from "./playground/hoc";
+
 const store = configureStore();
 
 store.subscribe(() => console.log(store.getState()));
@@ -20,4 +22,8 @@ store.dispatch(setTextFilter("gas"));
 const state = store.getState();
 console.log(getVisibleExpenses(state.expenses, state.filters));
 
-ReactDOM.render(<AppRouter />, document.getElementById("root"));
+// ReactDOM.render(<AppRouter />, document.getElementById("root"));
+ReactDOM.render(
+  <Info info="infooooooo" isAuth={false} />,
+  document.getElementById("root")
+);
