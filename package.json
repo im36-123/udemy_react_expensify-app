@@ -12,7 +12,8 @@
     "react-redux": "5.0.7",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.0",
-    "redux": "latest"
+    "redux": "latest",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {},
   "scripts": {
