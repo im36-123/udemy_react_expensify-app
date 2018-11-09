@@ -1,19 +1,21 @@
 {
-  "name": "udemy_react_expensify-app",
+  "name": "new",
   "version": "1.0.0",
-  "description": "udemy_react_expensify-app",
+  "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "moment": "^2.22.2",
     "normalize.css": "^8.0.0",
-    "react": "16.2.0",
-    "react-dom": "16.2.0",
     "react-modal": "^3.6.1",
     "react-redux": "5.0.7",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.0",
     "redux": "latest",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "react": "16.6.1",
+    "react-dates": "18.2.2",
+    "react-dom": "16.6.1",
+    "react-scripts": "1.1.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -21,5 +23,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
