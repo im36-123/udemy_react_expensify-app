@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 import AppRouter from "./routers/AppRouter";
 import configureStore from "./store/configureStore";
 import { addExpense } from "./actions/expenses";
@@ -8,22 +9,23 @@ import getVisibleExpenses from "./selectors/expenses";
 import "../node_modules/normalize.css/normalize.css";
 import "./styles/style.css";
 
-import Info from "./playground/hoc";
-
 const store = configureStore();
 
 store.subscribe(() => console.log(store.getState()));
 
 store.dispatch(addExpense({ description: "Water bill" }));
-store.dispatch(addExpense({ description: "Gas bill" }));
+store.dispatch(addExpense({ description: "Gas bill", amount: 1000 }));
+store.dispatch(addExpense({ description: "rent", amount: 109500 }));
 
 store.dispatch(setTextFilter("gas"));
 
 const state = store.getState();
 console.log(getVisibleExpenses(state.expenses, state.filters));
 
-// ReactDOM.render(<AppRouter />, document.getElementById("root"));
-ReactDOM.render(
-  <Info info="infooooooo" isAuth={false} />,
-  document.getElementById("root")
+const jsx = (
+  <Provider store={store}>
+    <AppRouter />
+  </Provider>
 );
+
+ReactDOM.render(jsx, document.getElementById("root"));
